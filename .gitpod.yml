@@ -3,6 +3,8 @@ tasks:
   - command: |
       conda update -n base -c defaults conda
       conda env create -f environment.yml
+      conda init bash
+      source ~/.bashrc
       conda activate tf1
       python3 -m ipykernel install --user --name=python3
       for f in *.ipynb; do jupyter nbconvert --execute --to notebook --inplace "$f"; done
