@@ -2,7 +2,7 @@ image: ghcr.io/conda/conda-ci:gitpod-linux-python3.9
 tasks:
   - command: |
       conda update -n base -c defaults conda
-      yes | conda env create -f environment.yml
+      yes y | conda env create -f environment.yml
       conda init bash
       source ~/.bashrc
       conda activate tf1
